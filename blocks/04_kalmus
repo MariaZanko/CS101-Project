@@ -1,0 +1,19 @@
+Дані та дизайн експерименту
+Джерело даних: Відкритий академічний датасет транзакцій Amazon Reviews (Cell Phones & Accessories)
+Чому Amazon, а не MovieLens:У MovieLens є лише жанри та теги без поняття бренду виробника. В Amazon зв'язки 'товар - бренд' та 'товар - категорія' дають змогу GNN передавати інформацію до нового об'єкта через спільні властивості, навіть коли в нього немає жодної покупки.
+Бінаризація : За стандартом Hu, Koren, and Volinsky (2008), оцінки 4 та 5 зірок переведено в активні взаємодії (Interaction = 1). Оцінки 1–3 відкинуто як нерелевантний шум (Interaction = 0).
+Параметри підграфа: Вибірка містить 77 взаємодій для 4 моделей телефонів: Samsung, BlackBerry, HTM та Jethro.
+
+Cимуляція Cold Start
+Розподіл 75%\25%
+Warm Items (3 моделі):Samsung, BlackBerry, HTM залишено в навчальному графі для формування зв'язків.
+Cold Items (1 модель):Кнопочний телефон Jethro ізольовано як тестову новинку каталогу.
+Ізоляція товару:З навчального графа повністю вилучено всі факти покупок телефону Jethro. Для моделі під час тренування цього пристрою немає в історії продажів.
+Збереження метаданих:У графі залишено лише карточку властивостей новинки (тип, ціна $79.99, бренд Jethro). Завдання GNN — порекомендувати товар цільовим користувачам суто на основі його положення в графі метаданих.
+Захист від витоку даних (No Data Leakage): Усі тестові покупки винесено в окремий набір `true_results`. 
+
+Джерела:
+1. Ni, J., Li, J., & McAuley, J. (2019). Justifying recommendations using distantly-labeled reviews and fine-grained aspects. EMNLP-IJCNLP 2019.
+2. Hu, Y., Koren, Y., & Volinsky, C. (2008). Collaborative Filtering for Implicit Feedback Datasets. IEEE ICDM 2008.
+3. Schein, A. I., Popescul, A., Ungar, L. H., & Pennock, D. M. (2002). Methods and metrics for cold-start recommendations. ACM SIGIR 2002.
+4. Ji, Y., Sun, A., Zhang, J., & Li, C. (2023). A Critical Study on Data Leakage in Recommender System Offline Evaluation. ACM TOIS.
