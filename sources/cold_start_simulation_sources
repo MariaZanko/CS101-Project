@@ -1,0 +1,8 @@
+Датабаза товарів Amazon 
+https://www.kaggle.com/datasets/PromptCloudHQ/amazon-reviews-unlocked-mobile-phones/suggestions
+
+Література
+1 Ni, J., Li, J., & McAuley, J. (2019). Justifying recommendations using distantly-labeled reviews and fine-grained aspects. In Proceedings of EMNLP-IJCNLP, pp. 188–197.      https://aclanthology.org/D19-1018/
+2 Hu, Y., Koren, Y., & Volinsky, C. (2008). Collaborative Filtering for Implicit Feedback Datasets. In IEEE Eighth International Conference on Data Mining (ICDM), pp. 263–272.      https://ieeexplore.ieee.org/abstract/document/4781121
+3 Schein, A. I., Popescul, A., Ungar, L. H., & Pennock, D. M. (2002). Methods and metrics for cold-start recommendations. In Proceedings of the 25th Annual International ACM SIGIR Conference, pp. 253–260.      https://dl.acm.org/doi/abs/10.1145/564376.564421
+4 Ji, Y., Sun, A., Zhang, J., & Li, C. (2023). A Critical Study on Data Leakage in Recommender System Offline Evaluation. ACM Transactions on Information Systems (TOIS).      https://dl.acm.org/doi/full/10.1145/3569930
